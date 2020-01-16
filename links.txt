@@ -1,0 +1,4 @@
+https://www.pcdiga.com/processador-intel-core-i7-9700k-octa-core-3-6ghz-c-turbo-4-9ghz-12mb-skt1151 CPU
+https://www.pcdiga.com/placa-grafica-msi-geforce-rtx-2060-ventus-6g-oc GPU-1
+https://www.pcdiga.com/placa-grafica-gigabyte-geforce-rtx-2060-super-windforce-8gb GPU-2
+https://www.pcdiga.com/memoria-ram-hyperx-fury-ddr4-refresh-16gb-2x8gb-ddr4-3000mhz-cl15-preta RAM
