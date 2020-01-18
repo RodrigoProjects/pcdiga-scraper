@@ -138,10 +138,13 @@ def result2HTML(result):
                 <th class="col">Preço</th>
                 <th class="col">Desconto</th> 
                 <th class="col">Imagem</th>
+                <th class="col">Ações</th>
 
             </tr>
         </thead>
         <tbody>\n'''
+
+    links = list(data.values())[::-1]
 
     with codecs.open('ProdutosView.html', 'w', 'utf-8') as site:
         site.write(header + '\n')
@@ -155,6 +158,7 @@ def result2HTML(result):
                     site.write(f'\t\t<td class=\"img-holder\"><img src=\"{info}\"></img></td>\n')
                 else:
                     site.write(f'\t\t<td class=\"text-holder\">{info}</td>\n')
+            site.write('\t\t<td class=\"button-visit\"><button type="button" onclick="location.href=\'' + links.pop() + '\'" class="btn btn-outline-info">Visitar</button></th>')
             site.write('\t</tr>\n')
         site.write('    </tbody>\n    </table>\n</div>\n</body>')
 
