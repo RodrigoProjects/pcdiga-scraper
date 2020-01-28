@@ -11,11 +11,11 @@ class PCdiga:
     compToLinks = {}
     data = {}
 
-    def __init__(self):
+    def __init__(self, file_name):
         components = []
         links = []
         try: 
-            with codecs.open('links.txt', 'r', 'utf-8') as file:
+            with codecs.open(file_name, 'r', 'utf-8') as file:
                 line = file.readline()
                 while line:
                     arr = line.split()
@@ -127,5 +127,14 @@ class PCdiga:
         
         os.system('ProdutosView.html')
 
+    def result2Discord(self):
+        if not self.data:
+            raise NoData
 
+        links = list(self.compToLinks.values())[::-1]
+
+        for cmp, desc in self.data.items():
+            yield (f'> **{cmp}** - ***{desc["nome"]}***\n {links.pop()}')
+    
+        
 
