@@ -134,7 +134,7 @@ class PCdiga:
         links = list(self.compToLinks.values())[::-1]
 
         for cmp, desc in self.data.items():
-            yield (f'> **{cmp}** - ***{desc["nome"]}***\n {links.pop()}')
+            yield f'> **{cmp}** - ***{desc["nome"]}***\n>  **PREÇO** -> {desc["preco"]} :money_with_wings:\n>  **DISPONIBILIDADE** -> {":green_circle:" if desc["disponibilidade"] else ":red_circle"}\n>  **DESCONTO** -> {desc["desconto"]} {":money_mouth:" if "€" in desc["desconto"] else ":slight_frown:"} \n{links.pop()}'
     
         
 
