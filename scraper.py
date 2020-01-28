@@ -86,7 +86,7 @@ try:
     
         message = f'Requesting {cmp} '
         clear()
-        response = requests.get(data[cmp])
+        response = requests.get(link)
 
         if response.status_code > 210:
             print(f'Request com status_code: {response.status_code}\n')
@@ -99,9 +99,7 @@ try:
 
         else: 
             resultado[cmp] = bs4(response)
-        
-        
-            
+                  
             
 
 except Exception as e:
